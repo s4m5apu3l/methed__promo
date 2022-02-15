@@ -1,0 +1,129 @@
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Roboto"),
+    url(./assets/fonts/roboto-v29-latin_cyrillic-regular.woff2) format("woff2"),
+    url(./assets/fonts/roboto-v29-latin_cyrillic-regular.woff1) format("woff");
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Roboto"),
+    url(./assets/fonts/roboto-v29-latin_cyrillic-500.woff2) format("woff2"),
+    url(./assets/fonts/roboto-v29-latin_cyrillic-500.woff) format("woff");
+}
+
+:root {
+  --color-black1: #181818;
+  --color-black2: #000;
+  --color-white1: #fff;
+  --color-red1:#FF0000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: calc(100vh-60px);
+  min-width: 320px;
+  font-family: Roboto, sans-serif;
+  background-color: var(--color-black2);
+  color: var(--color-white1);
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* _____HEADER_____ */
+
+.header {
+  background: var(--color-black2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+  /* width: 532px; */
+  gap: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding-right: 5rem;
+}
+
+.not-uppercase {
+  text-transform: none;
+}
+
+.nav-btn {
+  cursor: pointer;
+  color: var(--color-white1);
+  border: none;
+  height: 30px;
+  width: 60px;
+  font-family: "Roboto";
+  text-align: center;
+  background-color: var(--color-black2);
+  text-transform: uppercase;
+}
+.active-btn {
+  background-color: var(--color-red1);
+  width: 90px;
+}
+
+.nav__soc-links {
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+  padding: 2px 0 0 3px;
+  gap: 20px;
+}
+
+.soc-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header__mute-box {
+position: absolute;
+right: 20rem;
+top: 10;
+}
+
+
+/* ________MAIN_________ */
+.main {
+  background: url(./assets/img/photo\ bg.jpg) no-repeat;
+}
+/* __ */
