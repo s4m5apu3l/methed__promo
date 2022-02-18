@@ -33,3 +33,14 @@
     </defs>
   </symbol>
 </svg>
+
+
+<svg class="icon">
+  <use xlink:href="#Group 2"></use>
+</svg><svg class="icon">
+  <use xlink:href="#Group 3"></use>
+</svg><svg class="icon">
+  <use xlink:href="#volume_up"></use>
+</svg><svg class="icon">
+  <use xlink:href="#Group 1"></use>
+</svg>
