@@ -22,7 +22,7 @@ function closeMenu() {
 
 // ________SWIPER_________
 
-const sliderThumbs = new Swiper('.slider-thumbs', {
+try{const sliderThumbs = new Swiper('.slider-thumbs', {
   loop: true,
   spaceBetween: 10,
   slidesPerView: 3,
@@ -37,8 +37,42 @@ sliderThumbs.on('click', (swiper) => {
 const sliderMain = new Swiper('.slider-main', {
   loop: true,
   spaceBetween: 10,
-  loopedSlides: 4,
+  loopedSlides: 3,
 });
 
 sliderThumbs.controller.control = sliderMain;
 sliderMain.controller.control = sliderThumbs;
+
+const video = document.querySelectorAll('video');
+
+sliderMain.on('slideChange', () => {
+  for(let i = 0; i < video.length; i+= 1) {
+    video[i].pause();
+  }
+});
+
+const pagination = document.querySelector('.pagination');
+const paginBtn = document.querySelector('.pagination__arrow');
+
+paginBtn.addEventListener('click', () => {
+  pagination.classList.toggle('pagination_active')
+});
+
+}catch {
+  
+}
+
+
+// ________AUDIO____CHECKBOX___
+  try{const mute = document.querySelector('.mute-box__checkbox');
+  const audio = new Audio('./assets/audio/waterTower.mp3');
+
+  mute.addEventListener('change', () => {
+    if(mute.checked) {
+      audio.play();
+    }else{
+      audio.pause();
+    }
+  });} catch {
+
+  }
